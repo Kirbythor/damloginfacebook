@@ -6,6 +6,23 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { AngularFireModule} from 'angularfire2';
+import { AngularFireDatabaseModule} from 'angularfire2/database';
+import { HttpModule} from '@angular/http';
+import { AngularFireAuthModule} from 'angularfire2/auth';
+
+import { Facebook } from '@ionic-native/facebook';
+
+
+const firebase = {
+    apiKey: "AIzaSyAN8nr8-gXjlXvpSEPpqL3lcl5xbE_pNqM",
+    authDomain: "damloginfacebook.firebaseapp.com",
+    databaseURL: "https://damloginfacebook.firebaseio.com",
+    projectId: "damloginfacebook",
+    storageBucket: "damloginfacebook.appspot.com",
+    messagingSenderId: "178878864784"
+};
+
 
 @NgModule({
   declarations: [
@@ -14,7 +31,11 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    HttpModule,
+    IonicModule.forRoot(MyApp),
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(firebase),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -24,6 +45,7 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
