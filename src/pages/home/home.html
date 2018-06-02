@@ -7,8 +7,8 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button color="secondary" (click)="loginwithfb()" *ngIf="!facebook.loggedIn">Login with Facebook</button>
-  <button ion-button (click)="logoutwithfb()">Logout with Facebook</button>
+  <button ion-button round color="secondary" (click)="loginwithfb()" *ngIf="!facebook.loggedIn">Login with Facebook</button>
+  <button ion-button round (click)="logoutwithfb()">Logout with Facebook</button>
 
   <ion-card *ngIf="facebook.loggedIn">
 
