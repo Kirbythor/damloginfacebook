@@ -15,6 +15,7 @@ import { QuoteService} from '../services/quotes';
 
 import { Facebook } from '@ionic-native/facebook';
 
+import { GooglePlus } from "@ionic-native/google-plus";
 
 const firebase = {
     apiKey: "AIzaSyAN8nr8-gXjlXvpSEPpqL3lcl5xbE_pNqM",
@@ -47,6 +48,7 @@ const firebase = {
     HomePage
   ],
   providers: [
+     GooglePlus,
     StatusBar,
     SplashScreen,
     Facebook,
