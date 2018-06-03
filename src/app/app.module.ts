@@ -11,6 +11,8 @@ import { AngularFireDatabaseModule} from 'angularfire2/database';
 import { HttpModule} from '@angular/http';
 import { AngularFireAuthModule} from 'angularfire2/auth';
 
+import { QuoteService} from '../services/quotes';
+
 import { Facebook } from '@ionic-native/facebook';
 
 
@@ -27,7 +29,9 @@ const firebase = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    WelcomePage,
+    SportsPage
   ],
   imports: [
     BrowserModule,
